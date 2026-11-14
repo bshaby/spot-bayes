@@ -1,0 +1,35 @@
+# Conda environment for spot-bayes (developed and tested on Linux).
+#
+#   conda env create -f environment.yml
+#   conda activate extremes
+#   make -C cpp                  # build the C++/GSL extension
+#   python -m pytest tests/ -q
+#
+# Use this environment's own `mpiexec` (put $CONDA_PREFIX/bin first on PATH): mpi4py
+# must be launched by the MPI it was built against.
+name: extremes
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12
+  - numpy>=2,<2.5          # numba caps numpy
+  - numba                  # JIT kernels; without it the code silently falls back to slow pure Python
+  - scipy
+  - mpmath
+  - matplotlib
+  - pandas
+  - networkx
+  - shapely
+  - geopandas
+  - pyreadr                # reads .rds clique files
+  - threadpoolctl
+  - statsmodels            # quantile regression in the *_preprocess.py scripts
+  - pyshp                  # shapefile reader for the *_preprocess.py maps
+  - mpich
+  - mpi4py
+  - gsl                    # for cpp/rw_inte_cpp.so
+  - cxx-compiler
+  - make
+  - patchelf               # embeds the GSL rpath into the built extension
+  - pytest

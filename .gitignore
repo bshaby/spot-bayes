@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Compiled C++ RW-transform extension (build with `make -C cpp`)
+cpp/*.so
+
+# Experiment outputs / fitted runs (large; regenerate by running the experiments)
+exp1_out/
+exp2_out/
+ab_z_out/
+exp2_setup_viz/
+rhat_results/
+*.ckpt.*.pkl
+
+# Editor / OS cruft
+.DS_Store
+*.swp
+
+# Logs (Slurm/MPI job output)
+*.log
