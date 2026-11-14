@@ -198,6 +198,7 @@ refused.
 | `scripts/` | command-line entry points |
 | `faroe_analysis/`, `nz_analysis/` | worked examples |
 | `tests/` | test suite, including byte-exact golden fixtures for both samplers |
+| `docs/` | [architecture guide](docs/architecture.md) and design notes |
 
 ## Tests
 
@@ -229,6 +230,12 @@ non-convex-domain model (VisGP covariance, barrier kernels, the Faroe cliques an
 covariates) comes from Chien-Chung Wang's *Spatial Extremes on Domains with Physical
 Barriers* (paper forthcoming). Chien-Chung Wang also prepared the New Zealand
 precipitation data, covariates and visibility graph.
+
+## Contributing
+
+Bug reports, fixes and new models are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md)
+for setup, the test rules and how to propose changes, and
+[`docs/architecture.md`](docs/architecture.md) for how the code fits together.
 
 ## License
 
