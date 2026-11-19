@@ -9,7 +9,11 @@ authors:
   - family-names: Shaby
     given-names: Benjamin A.
     affiliation: Colorado State University
-version: 0.1.2
+  - family-names: Shi
+    given-names: Muyang
+  - family-names: Wang
+    given-names: Chien-Chung
+version: 0.1.3
 date-released: 2026-11-18
 license: MIT
 repository-code: "https://github.com/bshaby/spot-bayes"
