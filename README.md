@@ -8,8 +8,9 @@
 
 `spot-bayes` fits Bayesian spatial-extremes models to threshold exceedances by MCMC.
 It merges two codebases: Muyang Shi's GPD scale-mixture model (multiplicative
-log-Laplace nugget, nonstationary Matérn) and Chien-Chung Wang's model for non-convex
-domains with physical barriers (VisGP covariance, visibility-filtered Wendland kernels, anisotropy).
+log-Laplace nugget, nonstationary Matérn; [Shi, Zhang and Shaby, 2026](https://arxiv.org/abs/2604.07640)) and
+Chien-Chung Wang's model for non-convex domains with physical barriers (VisGP
+covariance, visibility-filtered Wendland kernels, anisotropy; [Wang and Shaby, 2026](https://arxiv.org/abs/2611.23565)).
 All three model types share Shi's GPD + nugget tail construction:
 
 | `model` | Dependence structure |
@@ -228,8 +229,43 @@ The GPD scale-mixture model and much of the core numerical code come from Muyang
 [`GPD_ScaleMixture`](https://github.com/muyangshi/GPD_ScaleMixture). The
 non-convex-domain model (VisGP covariance, barrier kernels, the Faroe cliques and
 covariates) comes from Chien-Chung Wang's *Spatial Extremes on Domains with Physical
-Barriers* (paper forthcoming). Chien-Chung Wang also prepared the New Zealand
+Barriers* ([arXiv:2611.23565](https://arxiv.org/abs/2611.23565)). Chien-Chung Wang also prepared the New Zealand
 precipitation data, covariates and visibility graph.
+
+## References
+
+If you use `spot-bayes`, please cite the paper for the model you fit (GitHub's
+"Cite this repository" button gives these from [`CITATION.cff`](CITATION.cff)):
+
+- **`shi`** (and the GPD + log-Laplace nugget construction shared by all three models):
+  Muyang Shi, Likun Zhang and Benjamin A. Shaby (2026). *Log-Laplace Nuggets for Fully
+  Bayesian Fitting of Spatial Extremes Models to Threshold Exceedances.*
+  [arXiv:2604.07640](https://arxiv.org/abs/2604.07640).
+- **`wang`**: Chien-Chung Wang and Benjamin A. Shaby (2026). *Spatial Extremes on
+  Domains with Physical Barriers.* [arXiv:2611.23565](https://arxiv.org/abs/2611.23565).
+
+```bibtex
+@misc{shi2026loglaplace,
+  title         = {Log-Laplace Nuggets for Fully Bayesian Fitting of Spatial Extremes
+                   Models to Threshold Exceedances},
+  author        = {Shi, Muyang and Zhang, Likun and Shaby, Benjamin A.},
+  year          = {2026},
+  eprint        = {2604.07640},
+  archivePrefix = {arXiv},
+  primaryClass  = {stat.ME},
+  doi           = {10.48550/arXiv.2604.07640}
+}
+
+@misc{wang2026barriers,
+  title         = {Spatial Extremes on Domains with Physical Barriers},
+  author        = {Wang, Chien-Chung and Shaby, Benjamin A.},
+  year          = {2026},
+  eprint        = {2611.23565},
+  archivePrefix = {arXiv},
+  primaryClass  = {stat.AP},
+  doi           = {10.48550/arXiv.2611.23565}
+}
+```
 
 ## Contributing
 

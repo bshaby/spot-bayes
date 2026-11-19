@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: >-
+  If you use spot-bayes, please cite the software and the paper for the model you
+  fit: Shi, Zhang and Shaby (2026) for the shi model and the GPD + log-Laplace nugget
+  construction shared by all models; Wang and Shaby (2026) for the wang model.
+title: "spot-bayes: Spatial Peaks Over Thresholds with Bayesian hierarchical models"
+type: software
+authors:
+  - family-names: Shaby
+    given-names: Benjamin A.
+    affiliation: Colorado State University
+version: 0.1.2
+date-released: 2026-11-18
+license: MIT
+repository-code: "https://github.com/bshaby/spot-bayes"
+keywords:
+  - spatial extremes
+  - peaks over threshold
+  - extreme value theory
+  - Bayesian
+  - MCMC
+references:
+  - type: article
+    title: >-
+      Log-Laplace Nuggets for Fully Bayesian Fitting of Spatial Extremes Models to
+      Threshold Exceedances
+    authors:
+      - family-names: Shi
+        given-names: Muyang
+      - family-names: Zhang
+        given-names: Likun
+      - family-names: Shaby
+        given-names: Benjamin A.
+    year: 2026
+    journal: arXiv preprint
+    identifiers:
+      - type: other
+        value: "arXiv:2604.07640"
+      - type: doi
+        value: 10.48550/arXiv.2604.07640
+    url: "https://arxiv.org/abs/2604.07640"
+  - type: article
+    title: Spatial Extremes on Domains with Physical Barriers
+    authors:
+      - family-names: Wang
+        given-names: Chien-Chung
+      - family-names: Shaby
+        given-names: Benjamin A.
+    year: 2026
+    journal: arXiv preprint
+    identifiers:
+      - type: other
+        value: "arXiv:2611.23565"
+      - type: doi
+        value: 10.48550/arXiv.2611.23565
+    url: "https://arxiv.org/abs/2611.23565"

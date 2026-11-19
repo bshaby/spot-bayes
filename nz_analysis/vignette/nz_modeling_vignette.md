@@ -137,8 +137,9 @@ dropping the 12 in-barrier sites and rebuilding the junction tree from scratch.)
 
 ## 1. The three models
 
-All three share Shi's **GPD + multiplicative Log-Laplace nugget** scale-mixture tail;
-they differ in how they build spatial *dependence*:
+All three share Shi's **GPD + multiplicative Log-Laplace nugget** scale-mixture tail
+([Shi, Zhang and Shaby, 2026](https://arxiv.org/abs/2604.07640)); they differ in how they build spatial *dependence*
+(the barrier-aware `wang` model is [Wang and Shaby, 2026](https://arxiv.org/abs/2611.23565)):
 
 | Model | `model_type` | Dependence structure |
 |---|---|---|

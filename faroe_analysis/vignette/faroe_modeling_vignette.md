@@ -97,7 +97,7 @@ Those numbers support using short block maxima instead of raw time points.  The 
 
 ## I.4 Covariates
 
-The covariates come from the barrier-aware spatial-extremes work behind Wang's model (*Spatial Extremes on Domains with Physical Barriers*).  The `mu` covariates are used for the 0.95 quantile surface below.  The `sigma` and `xi` covariates are used for the GPD regression and ship with this analysis as `data/sigma_covariates_std_2stage_MCMC.csv` and `data/xi_covariates_std_2stage_MCMC.csv`.
+The covariates come from the barrier-aware spatial-extremes work behind Wang's model (*Spatial Extremes on Domains with Physical Barriers*, [Wang and Shaby, 2026](https://arxiv.org/abs/2611.23565)).  The `mu` covariates are used for the 0.95 quantile surface below.  The `sigma` and `xi` covariates are used for the GPD regression and ship with this analysis as `data/sigma_covariates_std_2stage_MCMC.csv` and `data/xi_covariates_std_2stage_MCMC.csv`.
 
 ## I.5 0.95 quantile regression
 
@@ -230,8 +230,9 @@ Everything below starts from the Part I outputs in `faroe_analysis/data/`.
 
 ## 1. The three models
 
-All three share Shi's **GPD + multiplicative Log-Laplace nugget** scale-mixture tail;
-they differ in how they build spatial *dependence*:
+All three share Shi's **GPD + multiplicative Log-Laplace nugget** scale-mixture tail
+([Shi, Zhang and Shaby, 2026](https://arxiv.org/abs/2604.07640)); they differ in how they build spatial *dependence*
+(the barrier-aware `wang` model is [Wang and Shaby, 2026](https://arxiv.org/abs/2611.23565)):
 
 | Model | `model_type` | Dependence structure |
 |---|---|---|

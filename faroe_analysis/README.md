@@ -165,7 +165,7 @@ Everything in `data/` was derived from public sources:
 - **GPD covariates, buffered island polygon, cliques and separators**
   (`data/*_covariates_std_2stage_MCMC.csv` for the threshold, σ and ξ;
   `data/buffered_faroe_{cliques,separators}.json`) — from Chien-Chung Wang's
-  *Spatial Extremes on Domains with Physical Barriers* code. The cliques were converted from `.rds` to JSON.
+  *Spatial Extremes on Domains with Physical Barriers* ([arXiv:2611.23565](https://arxiv.org/abs/2611.23565)) code. The cliques were converted from `.rds` to JSON.
 - **Coastline** (map overlays only, not tracked) — [Natural Earth](https://www.naturalearthdata.com/)
   1:10m coastline, public domain.
 
